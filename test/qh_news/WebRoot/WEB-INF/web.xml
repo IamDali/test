@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<!-- 富粉空间 新闻 -->
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>ServletGetNews</servlet-name>
+		<servlet-class>in.dapai.news.ServletGetNews</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ServletGetNews</servlet-name>
+		<url-pattern>/news</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- 富粉空间新闻end -->
+
+	<!--下面是天天玩棋牌的  -->
+
+	<servlet>
+		<servlet-name>Update</servlet-name>
+		<servlet-class>in.dapai.ttwqp.server.servlet.Update</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Update</servlet-name>
+		<url-pattern>/ttwqp/update</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Apps</servlet-name>
+		<servlet-class>in.dapai.ttwqp.server.servlet.Apps</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Apps</servlet-name>
+		<url-pattern>/ttwqp/apps</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet>
+		<servlet-name>AppUpdate</servlet-name>
+		<servlet-class>in.dapai.ttwqp.server.servlet.AppUpdate</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AppUpdate</servlet-name>
+		<url-pattern>/ttwqp/appupdate</url-pattern>
+	</servlet-mapping>
+	
+ 
+	<!-- 天天玩棋牌end -->
+	<!-- 公共服务 -->
+	<servlet>
+		<servlet-name>GetPUTAvatarUrl</servlet-name>
+		<servlet-class>in.dapai.common.servlet.GetPUTAvatarUrl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetPUTAvatarUrl</servlet-name>
+		<url-pattern>/common/getputurlavatar</url-pattern>
+	</servlet-mapping>
+	<!-- 公告 -->
+	<servlet>
+		<servlet-name>Bulletin</servlet-name>
+		<servlet-class>in.dapai.common.bulletin.servlet.ServletBulletin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Bulletin</servlet-name>
+		<url-pattern>/bulletin/get</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>BulletinUpdate</servlet-name>
+		<servlet-class>in.dapai.common.bulletin.servlet.Update</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>BulletinUpdate</servlet-name>
+		<url-pattern>/bulletin/update</url-pattern>
+	</servlet-mapping>
+
+	<!--end 公告 -->
+	<!-- 公共服务end -->
+</web-app>
